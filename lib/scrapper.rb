@@ -30,7 +30,7 @@ end
 
 def name_and_price
 	
-	name_and_price_arr = {}
+	name_and_price_arr = Hash.new
 	arr_name = crypto_name
 	arr_price = crypto_price
 
@@ -45,9 +45,9 @@ def hashes
 	name_and_price_arr = name_and_price
 
 	name_and_price_arr.each do |name_and_price_arr|
-		each_np << name_and_price_arr
+		each_np << {name_and_price_arr[0] => name_and_price_arr[1]}
 	end
-	return each_np
+puts each_np
 end
 
-print hashes
+hashes
